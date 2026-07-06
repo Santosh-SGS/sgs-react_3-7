@@ -167,7 +167,7 @@ export default function DigitalSolutionsPage() {
           position: "relative",
           overflow: "hidden",
           color: "#fff",
-          background: "#000",
+          background: "#fafafa",
         }}
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -197,7 +197,7 @@ export default function DigitalSolutionsPage() {
         </div>
       </section>
 
-      <section style={{ background: "#F3F8FB", borderTop: "1px solid rgba(12,31,53,0.07)", padding: "48px clamp(36px, 8vw, 120px) 80px" }}>
+      <section style={{ background: "#fafafa", borderTop: "1px solid rgba(12,31,53,0.07)", padding: "48px clamp(36px, 8vw, 120px) 80px" }}>
         <div className="digital-content-shell">
           <p style={{ color: "#DB4E37", fontSize: "11px", fontWeight: 800, letterSpacing: "0.14em", textTransform: "uppercase", marginBottom: "14px" }}>
             Platform Architecture
@@ -207,7 +207,7 @@ export default function DigitalSolutionsPage() {
           </h2>
           <div className="digital-three-grid" style={{ display: "grid", gap: "1px", background: "rgba(219,78,55,0.18)" }}>
             {architecture.map((item) => (
-              <div key={item.num} style={{ background: "#F3F8FB", borderTop: "3px solid #DB4E37", padding: "32px", minHeight: "260px" }}>
+              <div key={item.num} style={{ background: "#fafafa", borderTop: "3px solid #DB4E37", padding: "32px", minHeight: "260px" }}>
                 <span style={{ color: "#DB4E37", fontSize: "12px", fontWeight: 800, letterSpacing: "0.08em" }}>{item.num}</span>
                 <h3 style={{ fontSize: "17px", fontWeight: 800, margin: "14px 0 6px" }}>{item.title}</h3>
                 <p style={{ color: "#DB4E37", fontSize: "11px", fontWeight: 800, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: "16px" }}>
@@ -220,7 +220,7 @@ export default function DigitalSolutionsPage() {
         </div>
       </section>
 
-      <section style={{ background: "#EBF2F7", padding: "84px clamp(36px, 8vw, 120px)" }}>
+      <section style={{ background: "#fafafa", padding: "84px clamp(36px, 8vw, 120px)" }}>
         <div className="digital-content-shell">
           <p style={{ color: "#DB4E37", fontSize: "11px", fontWeight: 800, letterSpacing: "0.14em", textTransform: "uppercase", marginBottom: "14px" }}>
             Platform Modules
@@ -262,7 +262,7 @@ export default function DigitalSolutionsPage() {
         </div>
       </section>
 
-      <section style={{ background: "#F3F8FB", padding: "84px clamp(36px, 8vw, 120px)" }}>
+      <section style={{ background: "#fafafa", padding: "84px clamp(36px, 8vw, 120px)" }}>
         <div className="digital-content-shell">
           <p style={{ color: "#DB4E37", fontSize: "11px", fontWeight: 800, letterSpacing: "0.14em", textTransform: "uppercase", marginBottom: "14px" }}>
             What Sets SynTrack Apart
@@ -272,7 +272,7 @@ export default function DigitalSolutionsPage() {
           </h2>
           <div className="digital-two-grid" style={{ display: "grid", gap: "1px", background: "rgba(219,78,55,0.18)" }}>
             {differentiators.map(([title, desc]) => (
-              <div key={title} style={{ background: "#F3F8FB", borderLeft: "3px solid #DB4E37", padding: "32px", minHeight: "190px" }}>
+              <div key={title} style={{ background: "#fafafa", borderLeft: "3px solid #DB4E37", padding: "32px", minHeight: "190px" }}>
                 <h3 style={{ fontSize: "15px", fontWeight: 800, marginBottom: "12px" }}>{title}</h3>
                 <p style={{ color: "#555", fontSize: "13px", lineHeight: 1.7 }}>{desc}</p>
               </div>
@@ -281,7 +281,7 @@ export default function DigitalSolutionsPage() {
         </div>
       </section>
 
-      <section style={{ background: "#EBF2F7", borderTop: "1px solid rgba(12,31,53,0.07)", padding: "76px clamp(36px, 8vw, 120px)" }}>
+      <section style={{ background: "#fafafa", borderTop: "1px solid rgba(12,31,53,0.07)", padding: "76px clamp(36px, 8vw, 120px)" }}>
         <div className="digital-content-shell">
           <p style={{ color: "#DB4E37", fontSize: "11px", fontWeight: 800, letterSpacing: "0.14em", textTransform: "uppercase", marginBottom: "14px" }}>
             Technology Stack
@@ -294,7 +294,7 @@ export default function DigitalSolutionsPage() {
           </p>
           <div className="digital-stack-grid" style={{ display: "grid", gap: "1px", background: "rgba(219,78,55,0.18)" }}>
             {stack.map((item) => (
-              <div key={item.name} style={{ background: "#F3F8FB", padding: "32px", minHeight: "210px" }}>
+              <div key={item.name} style={{ background: "#fafafa", padding: "32px", minHeight: "210px" }}>
                 <h3 style={{ borderLeft: "3px solid #DB4E37", paddingLeft: "12px", fontSize: "14px", fontWeight: 800, marginBottom: "12px" }}>
                   {item.name}
                 </h3>

@@ -295,14 +295,14 @@ export default async function ProjectsPage() {
           alignItems: "center",
           justifyContent: "center",
           overflow: "hidden",
-          background: "var(--grad-deep)",
+          background: "#fafafa",
         }}
       >
         <img
           src={`${liveAssetBase}/topImage.jpg`}
           alt=""
           aria-hidden="true"
-          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }}
+          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", filter: "grayscale(100%)" }}
         />
         <div
           style={{

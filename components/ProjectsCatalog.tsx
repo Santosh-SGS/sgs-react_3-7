@@ -44,12 +44,12 @@ export default function ProjectsCatalog({ projects }: { projects: CatalogProject
 
   return (
     <>
-      <section style={{ background: "#F3F8FB", padding: "84px clamp(36px, 8vw, 120px)" }}>
+      <section style={{ background: "#fafafa", padding: "84px clamp(36px, 8vw, 120px)" }}>
         <div style={{ maxWidth: "1240px", margin: "0 auto" }}>
-          <p style={{ color: "#4AB4D4", fontSize: "11px", fontWeight: 600, letterSpacing: "0.14em", textTransform: "uppercase", marginBottom: "14px", fontFamily: "var(--font-roboto), Roboto, sans-serif" }}>
+          <p style={{ color: "#DB4F37", fontSize: "11px", fontWeight: 600, letterSpacing: "0.14em", textTransform: "uppercase", marginBottom: "14px", fontFamily: "var(--font-roboto), Roboto, sans-serif" }}>
             All Projects
           </p>
-          <h2 style={{ fontFamily: "var(--font-poppins), Poppins, sans-serif", fontSize: "clamp(28px, 3.5vw, 46px)", fontWeight: 700, lineHeight: 1.14, letterSpacing: "-0.02em", color: "#0C1F35", marginBottom: "28px" }}>
+          <h2 style={{ fontFamily: "var(--font-poppins), Poppins, sans-serif", fontSize: "clamp(28px, 3.5vw, 46px)", fontWeight: 700, lineHeight: 1.14, letterSpacing: "-0.02em", color: "#000", marginBottom: "28px" }}>
             Selected portfolio
           </h2>
 
@@ -66,8 +66,8 @@ export default function ProjectsCatalog({ projects }: { projects: CatalogProject
                   padding: "8px 20px",
                   borderRadius: "4px",
                   border: `1px solid ${activeType === filter.value ? "#DB4F37" : "rgba(219,79,55,0.2)"}`,
-                  background: activeType === filter.value ? "#DB4F37" : "transparent",
-                  color: activeType === filter.value ? "#fff" : "#DB4F37",
+                  background: "transparent",
+                  color: "#DB4F37",
                   cursor: "pointer",
                   transition: "all 0.2s ease",
                 }}
@@ -90,13 +90,17 @@ export default function ProjectsCatalog({ projects }: { projects: CatalogProject
                 borderRadius: "3px",
                 padding: "10px 14px",
                 fontSize: "13px",
-                color: "#0C1F35",
+                color: "#000",
                 outline: "none",
                 fontFamily: "var(--font-roboto), Roboto, sans-serif",
                 background: "#fff",
               }}
             />
           </div>
+
+          <h2 onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} style={{ fontFamily: "var(--font-poppins), Poppins, sans-serif", fontSize: "clamp(28px, 3.5vw, 46px)", fontWeight: 700, lineHeight: 1.14, letterSpacing: "-0.02em", color: "#000", marginBottom: "28px", cursor: "pointer" }}>
+            Selected portfolio
+          </h2>
 
           <div
             style={{
@@ -116,7 +120,7 @@ export default function ProjectsCatalog({ projects }: { projects: CatalogProject
                   style={{
                     borderRadius: "4px",
                     overflow: "hidden",
-                    background: "#F3F8FB",
+                    background: "#ffffff",
                     border: "0.5px solid rgba(12,31,53,0.08)",
                     transition: "transform 0.3s ease",
                     cursor: "pointer",
@@ -131,7 +135,7 @@ export default function ProjectsCatalog({ projects }: { projects: CatalogProject
                       onError={(event) => {
                         event.currentTarget.src = "/img/synergizpic.jpeg";
                       }}
-                      style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                      style={{ width: "100%", height: "100%", objectFit: "cover", filter: "grayscale(100%)" }}
                     />
                     <div
                       style={{
@@ -161,10 +165,10 @@ export default function ProjectsCatalog({ projects }: { projects: CatalogProject
                     </div>
                   </div>
                   <div style={{ padding: "20px", borderTop: "0.5px solid rgba(12,31,53,0.06)" }}>
-                    <h3 style={{ fontFamily: "var(--font-syne), Syne, sans-serif", fontWeight: 700, fontSize: "14px", color: "#0C1F35", letterSpacing: "-0.01em", lineHeight: 1.35, marginBottom: "6px" }}>
+                    <h3 style={{ fontFamily: "var(--font-roboto), Roboto, sans-serif", fontWeight: 700, fontSize: "14px", color: "#000", letterSpacing: "-0.01em", lineHeight: 1.35, marginBottom: "6px" }}>
                       {project.name}
                     </h3>
-                    <p style={{ fontFamily: "var(--font-roboto), Roboto, sans-serif", fontSize: "12px", color: "#3A5468", lineHeight: 1.5, marginBottom: "14px" }}>
+                    <p style={{ fontFamily: "var(--font-roboto), Roboto, sans-serif", fontSize: "12px", color: "#000", lineHeight: 1.5, marginBottom: "14px" }}>
                       {project.description}
                     </p>
                     {project.clientName && (

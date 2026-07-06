@@ -43,7 +43,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${roboto.variable} ${poppins.variable} ${syne.variable}`}>
-      <body style={{ fontFamily: "var(--font-roboto), Roboto, sans-serif", minHeight: "100vh", display: "flex", flexDirection: "column" }}>
+      <body style={{ fontFamily: "var(--font-roboto), Roboto, sans-serif", minHeight: "100vh", display: "flex", flexDirection: "column", background: "#fafafa" }}>
         <Navbar />
         <main style={{ flex: 1 }}>{children}</main>
         <Footer />

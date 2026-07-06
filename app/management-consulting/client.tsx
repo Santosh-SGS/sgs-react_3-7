@@ -121,7 +121,6 @@ function CapabilityGrid({ items }: { items: string[] }) {
         style={{
           display: "grid",
           gap: "1px",
-          background: "rgba(219,78,55,0.12)",
         }}
       >
         {visibleItems.map((item, i) => (
@@ -142,7 +141,6 @@ function CapabilityGrid({ items }: { items: string[] }) {
             style={{
               display: "grid",
               gap: "1px",
-              background: "rgba(219,78,55,0.12)",
             }}
           >
             {hiddenItems.map((item, i) => (
@@ -164,13 +162,13 @@ function CapabilityCard({ item }: { item: string }) {
       style={{
         background: "#fff",
         borderLeft: "2px solid #4AB4D4",
-        padding: "28px",
-        minHeight: "112px",
+        padding: "20px",
+        minHeight: "80px",
         display: "flex",
         alignItems: "center",
       }}
     >
-      <h3 style={{ color: "#333", fontSize: "13px", fontWeight: 800, lineHeight: 1.35 }}>
+      <h3 style={{ color: "#000", fontSize: "13px", fontWeight: 800, lineHeight: 1.35 }}>
         {item}
       </h3>
     </div>
@@ -178,23 +176,19 @@ function CapabilityCard({ item }: { item: string }) {
 }
 
 function ServiceSection({ service }: { service: (typeof services)[number] }) {
-  const sectionBg = service.light ? "#fff" : "#f7f7f7";
-
   return (
-    <section id={service.id} style={{ background: sectionBg }}>
+    <section id={service.id}>
       <RevealBlock>
         <div
           style={{
             borderTop: "1px solid rgba(219,78,55,0.14)",
-            background: `linear-gradient(90deg, ${sectionBg} 0%, rgba(255,255,255,0.96) 58%, rgba(247,247,247,0.92) 100%)`,
           }}
         >
           <div style={{ maxWidth: "1240px", margin: "0 auto", padding: "30px 24px" }}>
             <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "12px" }}>
-              <span style={{ width: "20px", height: "1px", background: "#DB4E37", display: "block" }} />
               <span
                 style={{
-                  color: "#4AB4D4",
+                  color: "#DB4E37",
                   fontSize: "11px",
                   fontWeight: 800,
                   letterSpacing: "0.14em",
@@ -204,23 +198,12 @@ function ServiceSection({ service }: { service: (typeof services)[number] }) {
                 Service {service.num}
               </span>
             </div>
-            <h2
-              style={{
-                color: "#DB4E37",
-                fontSize: "clamp(26px, 2.6vw, 38px)",
-                fontWeight: 800,
-                lineHeight: 1.15,
-                maxWidth: "860px",
-              }}
-            >
-              {service.title}
-            </h2>
           </div>
         </div>
       </RevealBlock>
 
       <RevealBlock y={30}>
-        <div style={{ height: "260px", overflow: "hidden", position: "relative" }}>
+        <div style={{ height: "310px", overflow: "hidden", position: "relative" }}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src={service.img} alt={service.title} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
           <div
@@ -250,6 +233,12 @@ function ServiceSection({ service }: { service: (typeof services)[number] }) {
         </div>
       </RevealBlock>
 
+      <div style={{ maxWidth: "1240px", margin: "0 auto", padding: "24px 24px 0" }}>
+        <h2 style={{ color: "#DB4E37", fontSize: "clamp(22px, 2.2vw, 32px)", fontWeight: 800, lineHeight: 1.15 }}>
+          {service.title}
+        </h2>
+      </div>
+
       <RevealBlock y={30}>
         <div style={{ maxWidth: "1240px", margin: "0 auto", padding: "52px 24px 58px" }}>
           <div
@@ -264,14 +253,14 @@ function ServiceSection({ service }: { service: (typeof services)[number] }) {
               style={{
                 borderLeft: "2px solid #4AB4D4",
                 paddingLeft: "16px",
-                color: "#444",
+                color: "#000",
                 fontSize: "12px",
                 lineHeight: 1.7,
               }}
             >
               <span
                 style={{
-                  color: "#DB4E37",
+                  color: "#000",
                   display: "block",
                   fontSize: "10px",
                   fontWeight: 800,
@@ -284,7 +273,7 @@ function ServiceSection({ service }: { service: (typeof services)[number] }) {
               </span>
               {service.detail}
             </div>
-            <p style={{ color: "#444", fontSize: "15px", lineHeight: 1.85 }}>{service.body}</p>
+            <p style={{ color: "#000", fontSize: "15px", lineHeight: 1.85 }}>{service.body}</p>
           </div>
 
           <CapabilityGrid items={service.items} />
@@ -305,8 +294,8 @@ export default function ManagementConsultingClient() {
           alignItems: "center",
           position: "relative",
           overflow: "hidden",
-          color: "#fff",
-          background: "#000",
+          color: "#000",
+          background: "#fafafa",
         }}
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -326,7 +315,7 @@ export default function ManagementConsultingClient() {
         <div style={{ position: "relative", zIndex: 1, maxWidth: "1240px", margin: "0 auto", padding: "78px 24px", width: "100%" }}>
           <div
             style={{
-              color: "#4AB4D4",
+                  color: "#fff",
               fontSize: "11px",
               fontWeight: 800,
               letterSpacing: "0.16em",
@@ -338,6 +327,7 @@ export default function ManagementConsultingClient() {
           </div>
           <h1
             style={{
+              color: "#fff",
               fontSize: "clamp(28px, 3.4vw, 42px)",
               fontWeight: 800,
               lineHeight: 1.08,
@@ -347,7 +337,7 @@ export default function ManagementConsultingClient() {
           >
             Management Consulting
           </h1>
-          <p style={{ color: "rgba(255,255,255,0.92)", fontSize: "16px", lineHeight: 1.75, maxWidth: "760px" }}>
+           <p style={{ color: "#fff", fontSize: "16px", lineHeight: 1.75, maxWidth: "760px" }}>
             Synergiz Global Services offers a comprehensive suite of services spanning Programme Management, Contract Management, Digital Implementations, and Project Management. With our diverse expertise and unwavering commitment to excellence, we guarantee successful project execution and the achievement of desired outcomes for our clients.
           </p>
         </div>
@@ -359,9 +349,9 @@ export default function ManagementConsultingClient() {
           position: "sticky",
           top: "90px",
           zIndex: 100,
-          background: "rgba(55,58,64,0.97)",
+          background: "#fafafa",
           backdropFilter: "blur(10px)",
-          borderBottom: "1px solid rgba(219,78,55,0.22)",
+          borderBottom: "1px solid #000",
           overflowX: "auto",
         }}
       >
@@ -371,8 +361,8 @@ export default function ManagementConsultingClient() {
               key={item.anchor}
               href={`#${item.anchor}`}
               style={{
-                color: "rgba(255,255,255,0.9)",
-                borderRight: "1px solid rgba(219,78,55,0.18)",
+                color: "#000",
+                borderRight: "1px solid #000",
                 display: "flex",
                 alignItems: "center",
                 gap: "10px",

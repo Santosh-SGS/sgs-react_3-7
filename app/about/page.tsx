@@ -45,20 +45,6 @@ const fallbackTeam: TeamMember[] = [
     link: "https://www.linkedin.com/in/pratik-more-601562105/",
   },
   {
-    name: "H.K Jaggi",
-    designation: "",
-    description: "",
-    photo: "",
-    link: "",
-  },
-  {
-    name: "Dr Senthil",
-    designation: "",
-    description: "",
-    photo: "/img/dr-senthil.jpeg",
-    link: "",
-  },
-  {
     name: "Chahtey Ram",
     designation: "Vice President - Technical",
     description: "",
@@ -94,11 +80,25 @@ const fallbackTeam: TeamMember[] = [
     link: "https://www.linkedin.com/in/nkgarg786/",
   },
   {
+    name: "Dr Senthil",
+    designation: "",
+    description: "",
+    photo: "/img/dr-senthil.jpeg",
+    link: "",
+  },
+  {
     name: "Swathi Sagi",
     designation: "Engineering Manager - IT",
     description: "",
     photo: `${liveAssetBase}/New%20Project%20(40).jpg`,
     link: "https://www.linkedin.com/in/swathi-sagi-57bb6826/",
+  },
+  {
+    name: "H.K Jaggi",
+    designation: "",
+    description: "",
+    photo: "",
+    link: "",
   },
 ];
 
@@ -244,7 +244,7 @@ export default async function AboutPage() {
         }
 
         .about-team-name-link {
-          color: #DB4E37;
+          color: #000;
           text-decoration: none;
         }
 
@@ -257,9 +257,9 @@ export default async function AboutPage() {
           align-items: center;
           justify-content: center;
           gap: 6px;
-          height: 55vmin;
-          min-height: 320px;
-          max-height: 560px;
+          height: 40vmin;
+          min-height: 220px;
+          max-height: 400px;
           overflow: hidden;
         }
 
@@ -307,7 +307,7 @@ export default async function AboutPage() {
         style={{
           marginTop: "90px",
           minHeight: "62vh",
-          background: "#000",
+          background: "#fafafa",
           display: "grid",
           gridTemplateColumns: "1.05fr 0.95fr",
         }}
@@ -327,17 +327,17 @@ export default async function AboutPage() {
             justifyContent: "center",
             padding: "64px 32px",
             textAlign: "center",
-            color: "#fff",
+            color: "#000",
           }}
         >
           <div>
-            <p style={{ color: "#59B1D0", fontSize: "13px", fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase", marginBottom: "14px" }}>
+            <p style={{ color: "#000", fontSize: "13px", fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase", marginBottom: "14px" }}>
               About Synergiz
             </p>
-            <h1 style={{ color: "#DB4F37", fontSize: "clamp(42px, 6vw, 76px)", lineHeight: 1, fontWeight: 800, margin: "0 0 20px" }}>
+            <h1 style={{ color: "#000", fontSize: "clamp(42px, 6vw, 76px)", lineHeight: 1, fontWeight: 800, margin: "0 0 20px" }}>
               Our Story
             </h1>
-            <p style={{ color: "rgba(255,255,255,0.82)", fontSize: "18px", lineHeight: 1.7, maxWidth: "560px", margin: "0 auto" }}>
+            <p style={{ color: "#000", fontSize: "18px", lineHeight: 1.7, maxWidth: "560px", margin: "0 auto" }}>
               Building a stronger infrastructure future through programme management, digital systems, and people who care about delivery.
             </p>
           </div>
@@ -347,10 +347,10 @@ export default async function AboutPage() {
       <section className="about-section" style={{ padding: "72px 40px", maxWidth: "1240px", margin: "0 auto" }}>
         <div className="about-story-grid" style={{ display: "grid", gridTemplateColumns: "0.8fr 1.2fr", gap: "48px", alignItems: "start" }}>
           <div>
-            <p style={{ color: "#59B1D0", fontSize: "12px", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", marginBottom: "12px" }}>
+            <p style={{ color: "#000", fontSize: "12px", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", marginBottom: "12px" }}>
               Who We Are
             </p>
-            <h2 style={{ color: "#DB4F37", fontSize: "clamp(32px, 4vw, 52px)", lineHeight: 1.06, fontWeight: 800, margin: 0 }}>
+            <h2 style={{ color: "#000", fontSize: "clamp(32px, 4vw, 52px)", lineHeight: 1.06, fontWeight: 800, margin: 0 }}>
               Infrastructure management with digital discipline.
             </h2>
           </div>
@@ -361,7 +361,7 @@ export default async function AboutPage() {
               "From SynTrack to BIM-enabled monitoring and PMIS rollouts, our teams use technology to connect site realities with leadership dashboards, improving collaboration between clients, contractors, and consultants.",
               "The foundation remains our people: experienced professionals working with resilience, accountability, and a shared commitment to quality.",
             ].map((paragraph) => (
-              <p key={paragraph} style={{ color: "#444", fontSize: "18px", lineHeight: 1.85, margin: "0 0 18px", textAlign: "justify" }}>
+              <p key={paragraph} style={{ color: "#000", fontSize: "18px", lineHeight: 1.85, margin: "0 0 18px", textAlign: "justify" }}>
                 {paragraph}
               </p>
             ))}
@@ -369,15 +369,15 @@ export default async function AboutPage() {
         </div>
       </section>
 
-      <section style={{ background: "#f6fbfd", padding: "58px 20px" }}>
+      <section style={{ background: "#fafafa", padding: "58px 20px" }}>
         <div style={{ maxWidth: "1240px", margin: "0 auto" }}>
-          <h2 style={{ color: "#DB4F37", textAlign: "center", fontSize: "clamp(30px, 4vw, 48px)", fontWeight: 800, margin: "0 0 34px" }}>
+          <h2 style={{ color: "#000", textAlign: "center", fontSize: "clamp(30px, 4vw, 48px)", fontWeight: 800, margin: "0 0 34px" }}>
             Our Management Team
           </h2>
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(230px, 1fr))",
+              gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))",
               gap: "18px",
             }}
           >
@@ -388,19 +388,19 @@ export default async function AboutPage() {
                     <img
                       src={member.photo}
                       alt={member.name}
-                      style={{ width: "100%", aspectRatio: "4 / 4.6", objectFit: "cover", filter: "grayscale(1)", display: "block" }}
+                      style={{ width: "100%", aspectRatio: "4 / 4", objectFit: "cover", filter: "grayscale(1)", display: "block" }}
                     />
                   ) : (
                     <div
                       aria-label={member.name}
                       style={{
                         width: "100%",
-                        aspectRatio: "4 / 4.6",
+                        aspectRatio: "4 / 4",
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "center",
                         background: "linear-gradient(135deg, #373A40 0%, #111 100%)",
-                        color: "#59B1D0",
+                        color: "#000",
                         fontSize: "clamp(42px, 6vw, 72px)",
                         fontWeight: 800,
                         letterSpacing: "0.04em",
@@ -423,7 +423,7 @@ export default async function AboutPage() {
                       aria-label={`${member.name} on LinkedIn`}
                       className="about-linkedin-button"
                     >
-                      in
+                      <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
                     </a>
                   )}
                 </div>
@@ -439,11 +439,11 @@ export default async function AboutPage() {
                       {member.name}
                     </a>
                   ) : (
-                    <span style={{ color: "#DB4E37" }}>{member.name}</span>
+                    <span style={{ color: "#000" }}>{member.name}</span>
                   )}
                 </h3>
                 {member.designation && (
-                  <p style={{ color: "#222", fontSize: "15px", lineHeight: 1.45, margin: 0 }}>{member.designation}</p>
+                  <p style={{ color: "#000", fontSize: "15px", lineHeight: 1.45, margin: 0 }}>{member.designation}</p>
                 )}
               </article>
             ))}
@@ -453,29 +453,29 @@ export default async function AboutPage() {
 
       <section className="about-section" style={{ padding: "72px 40px", maxWidth: "1240px", margin: "0 auto" }}>
         <div style={{ textAlign: "center", marginBottom: "36px" }}>
-          <h2 style={{ color: "#DB4F37", fontSize: "clamp(30px, 4vw, 48px)", fontWeight: 800, margin: "0 0 12px" }}>
+          <h2 style={{ color: "#000", fontSize: "clamp(30px, 4vw, 48px)", fontWeight: 800, margin: "0 0 12px" }}>
             Our People And Culture
           </h2>
-          <p style={{ color: "#59B1D0", fontSize: "20px", fontWeight: 700, fontStyle: "italic", margin: 0 }}>
+          <p style={{ color: "#000", fontSize: "20px", fontWeight: 700, fontStyle: "italic", margin: 0 }}>
             Embracing diversity, equality, and innovation.
           </p>
         </div>
-        <p style={{ color: "#444", fontSize: "18px", lineHeight: 1.85, maxWidth: "980px", margin: "0 auto 32px", textAlign: "center" }}>
+        <p style={{ color: "#000", fontSize: "18px", lineHeight: 1.85, maxWidth: "980px", margin: "0 auto 32px", textAlign: "center" }}>
           Our greatest strength is the team behind the work. We nurture a culture where people can contribute fully, grow through real project challenges, and bring new thinking to infrastructure delivery.
         </p>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: "18px" }}>
           {culturePoints.map((point) => (
             <div key={point.title} style={{ borderTop: "4px solid #DB4F37", background: "#373A40", padding: "24px", minHeight: "180px" }}>
-              <h3 style={{ color: "#59B1D0", fontSize: "21px", margin: "0 0 12px" }}>{point.title}</h3>
-              <p style={{ color: "rgba(255,255,255,0.82)", fontSize: "15px", lineHeight: 1.7, margin: 0 }}>{point.text}</p>
+              <h3 style={{ color: "#fff", fontSize: "21px", margin: "0 0 12px" }}>{point.title}</h3>
+              <p style={{ color: "#fff", fontSize: "15px", lineHeight: 1.7, margin: 0 }}>{point.text}</p>
             </div>
           ))}
         </div>
       </section>
 
-      <section style={{ background: "#000", padding: "58px 20px 70px" }}>
+      <section style={{ background: "#fafafa", padding: "58px 20px 70px" }}>
         <div style={{ maxWidth: "1240px", margin: "0 auto" }}>
-          <h2 style={{ color: "#DB4F37", textAlign: "center", fontSize: "clamp(30px, 4vw, 48px)", fontWeight: 800, margin: "0 0 30px" }}>
+          <h2 style={{ color: "#000", textAlign: "center", fontSize: "clamp(30px, 4vw, 48px)", fontWeight: 800, margin: "0 0 30px" }}>
             Our Gallery
           </h2>
           <div className="about-gallery">
