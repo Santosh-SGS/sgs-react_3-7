@@ -39,3 +39,20 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# ai agent config files
+AGENTS.md
+CLAUDE.md
+
+# chrome browser data dirs
+.chrome-*
+
+# dev logs & scripts
+*.log
+run-dev-*
+
+# temp / working dirs
+tmp/
+
+# screenshots
+*.png
